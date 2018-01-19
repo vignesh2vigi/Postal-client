@@ -1,0 +1,44 @@
+<br>
+<p>Search:</p><input type="text" ng-model="searchTxt">
+<button ng-click="exportData()">Export</button>
+<div id="exportable">
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Lead Id</th>
+<th>Mobile No</th>
+<th>Customername</th>
+<th>Area</th>
+<th>City</th>
+<th>Pincode</th>
+<th>State</th>
+<th>Leadcreated date</th>
+<th>Verifydate</th>
+<th>approvedate</th>
+<th>Assigning to</th>
+<th>Remarks</th>
+<th>Verifystatus</th>
+<th>ApproveStatus</th>
+</tr>
+</thead>
+<tbody >
+<tr ng-repeat="client in complete | filter:searchTxt" >
+<td>{{client.lead_id}}</td>
+<td>{{client.clientid}}</td>
+<td>{{client.firstName}}</td>
+<td>{{client.areaName}}</td>
+<td>{{client.city}}</td>
+<td>{{client.pincode}}</td>
+<td>{{client.state}}</td>
+<td>{{client.lead_created_date}}</td>
+<td>{{client.lead_verified_date}}</td>
+<td>{{client.lead_approved_date}}</td>
+<td>{{client.lead_assigned_to}}</td>
+<td>{{client.remarks}}</td>
+<td>{{client.lead_status}}</td>
+<td>{{client.approved_status}}</td>
+</tr>
+</tbody>
+</table>
+</div>
+<a href="#!/home">Home</a>
